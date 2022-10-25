@@ -43,6 +43,10 @@ export default function Experience({ anchorScrollSpy }) {
                             <p className="text-gray-100 mb-3 font-bold">Formation développeur intégrateur d'application web</p>
                             <ul className="text-white font-extralight">
                                 <li>Diplôme RNCP niveau 3</li>
+                                <li>JavaScript</li>
+                                <li>PHP</li>
+                                <li>MySQL</li>
+                                <li>HTML / CSS</li>
                             </ul>
                         </div>
                     </li>
@@ -104,10 +108,13 @@ export default function Experience({ anchorScrollSpy }) {
                             <p className="text-gray-100 mb-3 font-bold">Formation</p>
                             <ul className="text-white font-extralight">
                                 <li>
-                                    ReactJs
+                                    ReactJS
                                 </li>
                                 <li>
-                                    React-Redux
+                                    React-Redux / Recoil
+                                </li>
+                                <li>
+                                    Hooks / Reducer
                                 </li>
                                 <li>
                                     Architecture complexe
