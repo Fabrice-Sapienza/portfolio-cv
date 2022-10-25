@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .bg-custom {
+        background-image: repeating-linear-gradient(135deg, rgba(189, 189, 189, 0.1) 0px, rgba(189, 189, 189, 0.1) 2px, transparent 2px, transparent 4px), linear-gradient(90deg, rgb(255, 255, 255), rgb(255, 255, 255));
+    }
+
+    @media (min-width: 1024px) {
+        .is-current::after {
+            content: '';
+            position: absolute;
+            bottom: 3px;
+            right: 0;
+            width: 100%;
+            @apply border-solid;
+            @apply border;
+            @apply border-primary;
+        }
+    }
+}
