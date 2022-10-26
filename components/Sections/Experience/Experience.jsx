@@ -1,6 +1,6 @@
 export default function Experience({ anchorScrollSpy }) {
     return (
-        <section className="bg-primary flex justify-center items-center flex-col" id={anchorScrollSpy}>
+        <section className="text-secondary bg-primary flex justify-center items-center flex-col" id={anchorScrollSpy}>
             <h2 className='text-center font-extrabold text-5xl mb-2 pt-16 md:pt-32 md:text-6xl'>
                 Mes
                 <span className="ml-3 before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-white relative inline-block">
@@ -15,7 +15,7 @@ export default function Experience({ anchorScrollSpy }) {
                             <p className="text-gray-100 text-sm mt-2 font-semibold">2004 - 2015</p>
                         </div>
                         <div className="mt-0.5 ml-4 lg:ml-0 pb-5">
-                            <h4 className="text-secondary font-bold text-xl mb-1.5">Entreprise Sapienza</h4>
+                            <h4 className="font-bold text-xl mb-1.5">Entreprise Sapienza</h4>
                             <p className="text-gray-100 mb-3 font-extralight">Peinture et revêtement de sol sur le site Airbus Helicopters au sein de l'entreprise familliale.</p>
                         </div>
                     </li>
@@ -25,7 +25,7 @@ export default function Experience({ anchorScrollSpy }) {
                             <p className="text-gray-100 text-sm mt-2 font-semibold">2015</p>
                         </div>
                         <div className="mt-0.5 ml-4 lg:ml-0 pb-5">
-                            <h4 className="text-secondary font-bold text-xl mb-1.5">Slap Digital - Paris</h4>
+                            <h4 className="font-bold text-xl mb-1.5">Slap Digital - Paris</h4>
                             <p className="text-gray-100 mb-3 font-bold">Stagiaire Développeur Web</p>
                             <ul className="text-white font-extralight">
                                 <li>Intégration Emailing</li>
@@ -39,7 +39,7 @@ export default function Experience({ anchorScrollSpy }) {
                             <p className="text-gray-100 text-sm mt-2 font-semibold">2016</p>
                         </div>
                         <div className="mt-0.5 ml-4 lg:ml-0 pb-5">
-                            <h4 className="text-secondary font-bold text-xl mb-1.5">École 3W Academy</h4>
+                            <h4 className="font-bold text-xl mb-1.5">École 3W Academy</h4>
                             <p className="text-gray-100 mb-3 font-bold">Formation développeur intégrateur d'application web</p>
                             <ul className="text-white font-extralight">
                                 <li>Diplôme RNCP niveau 3</li>
@@ -56,7 +56,7 @@ export default function Experience({ anchorScrollSpy }) {
                             <p className="text-gray-100 text-sm mt-2 font-semibold">2016 - 2019</p>
                         </div>
                         <div className="mt-0.5 ml-4 lg:ml-0 pb-5">
-                            <h4 className="text-secondary font-bold text-xl mb-1.5">Manageo - Aix</h4>
+                            <h4 className="font-bold text-xl mb-1.5">Manageo - Aix</h4>
                             <p className="text-gray-100 mb-3 font-bold">Développeur et Intégrateur Web</p>
                             <ul className="text-white font-extralight">
                                 <li>
@@ -80,7 +80,7 @@ export default function Experience({ anchorScrollSpy }) {
                             <p className="text-gray-100 text-sm mt-2 font-semibold">2019 - 2021</p>
                         </div>
                         <div className="mt-0.5 ml-4 lg:ml-0 pb-5">
-                            <h4 className="text-secondary font-bold text-xl mb-1.5">Manageo - Aix</h4>
+                            <h4 className="font-bold text-xl mb-1.5">Manageo - Aix</h4>
                             <p className="text-gray-100 mb-3 font-bold">Développeur Front-End</p>
                             <ul className="text-white font-extralight">
                                 <li>
@@ -104,7 +104,7 @@ export default function Experience({ anchorScrollSpy }) {
                             <p className="text-gray-100 text-sm mt-2 font-semibold">2022</p>
                         </div>
                         <div className="mt-0.5 ml-4 lg:ml-0 pb-5">
-                            <h4 className="text-secondary font-bold text-xl mb-1.5">École O'clock</h4>
+                            <h4 className="font-bold text-xl mb-1.5">École O'clock</h4>
                             <p className="text-gray-100 mb-3 font-bold">Formation</p>
                             <ul className="text-white font-extralight">
                                 <li>

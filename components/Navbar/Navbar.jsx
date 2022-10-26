@@ -1,14 +1,13 @@
-import Scrollspy from 'react-scrollspy'
 import { useState, useEffect, useRef } from 'react'
 import logo from '../../public/assets/logo.png'
-import Link from 'next/link'
-
+import { Link } from 'react-scroll';
 
 
 export default function Navbar() {
 
 	const [isOpen, setIsOpen] = useState(false)
 	const refMenu = useRef(null);
+
 
 	useEffect(() => {
 
@@ -30,7 +29,7 @@ export default function Navbar() {
 					<div className="flex justify-between items-center">
 
 						<div className='flex items-center justify-center'>
-							<img src={logo.src} alt="logo" />
+							<img src={logo.src} alt="logo" className='w-16' />
 							<div className='text-center'>
 								<span className='ml-2 text-secondary text-2xl block font-thin'><span className='font-bold text-primary'>F</span>abrice <span className='font-bold text-primary'>S</span>apienza</span>
 							</div>
@@ -47,34 +46,73 @@ export default function Navbar() {
 							</div>
 						</button>
 					</div>
-					<Scrollspy items={['section-1', 'section-2', 'section-3', 'section-4', 'section-5']} offset={-500} currentClassName="is-current" className={`${!isOpen && 'hidden'} flex px-1 pt-6 flex-col lg:visible lg:flex lg:bg-transparent lg:pt-0 lg:flex-row lg:space-x-10 lg:w-auto lg:items-center lg:justify-center`}>
-						<li className="py-2 text-center border-t border-gray-200 relative font-medium text-lg text-secondary hover:text-primary lg:border-0">
-							<Link href="#apropos" >
-								<a className="">À propos</a>
+					<ul className={`${!isOpen && 'hidden'} flex px-1 pt-6 flex-col lg:visible lg:flex lg:bg-transparent lg:pt-0 lg:flex-row lg:space-x-10 lg:w-auto lg:items-center lg:justify-center`}>
+						<li className="py-2 text-center border-t border-gray-200 relative lg:border-0">
+							<Link
+								to="section-1"
+								className="cursor-pointer font-medium text-lg hover:text-primary"
+								spy={true}
+								smooth={true}
+								offset={-500}
+								duration={500}
+								onClick={() => setIsOpen(false)}
+							>
+								À propos
 							</Link>
 						</li>
 						<li className="py-2 text-center border-t border-gray-200 relative lg:border-0">
-							<Link href="#experience" >
-								<a className="font-medium text-lg text-secondary hover:text-primary">Expérience</a>
+							<Link
+								to="section-2"
+								className="cursor-pointer font-medium text-lg hover:text-primary"
+								spy={true}
+								smooth={true}
+								offset={-500}
+								duration={500}
+								onClick={() => setIsOpen(false)}
+							>
+								Expérience
 							</Link>
 						</li>
 						<li className="py-2 text-center border-t border-gray-200 relative lg:border-0">
-							<Link href="#competence" >
-								<a className="font-medium text-lg text-secondary hover:text-primary">Compétence</a>
+							<Link
+								to="section-3"
+								className="cursor-pointer font-medium text-lg hover:text-primary"
+								spy={true}
+								smooth={true}
+								offset={-500}
+								duration={500}
+								onClick={() => setIsOpen(false)}
+							>
+								Compétence
 							</Link>
 						</li>
 						<li className="py-2 text-center border-t border-gray-200 relative lg:border-0">
-							<Link href="#portofolio" >
-								<a className="font-medium text-lg text-secondary hover:text-primary">Portofolio</a>
+							<Link
+								to="section-4"
+								className="cursor-pointer font-medium text-lg hover:text-primary"
+								spy={true}
+								smooth={true}
+								offset={-500}
+								duration={500}
+								onClick={() => setIsOpen(false)}
+							>
+								Portofolio
 							</Link>
 						</li>
 						<li className="py-2 text-center border-t border-b border-gray-200 relative lg:border-0">
-							<a
-								href="#contact"
-								className="font-medium text-lg text-secondary hover:text-primary"
-							>Contact</a>
+							<Link
+								to="section-5"
+								className="cursor-pointer font-medium text-lg hover:text-primary"
+								spy={true}
+								smooth={true}
+								offset={-500}
+								duration={500}
+								onClick={() => setIsOpen(false)}
+							>
+								Contact
+							</Link>
 						</li>
-					</Scrollspy>
+					</ul>
 					<div className={`${!isOpen && 'hidden'} flex justify-center items-center my-6 lg:my-0 lg:mx-3 lg:flex`} >
 						<a
 							href="#"

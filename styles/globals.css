@@ -8,7 +8,7 @@
     }
 
     @media (min-width: 1024px) {
-        .is-current::after {
+        .active::after {
             content: '';
             position: absolute;
             bottom: 3px;
