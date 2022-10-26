@@ -55,7 +55,7 @@ export default function Navbar() {
 								spy={true}
 								activeClass="is-current"
 								smooth={true}
-								offset={-600}
+								offset={-200}
 								duration={500}
 								onClick={() => setIsOpen(false)}
 							>
@@ -69,7 +69,7 @@ export default function Navbar() {
 								spy={true}
 								activeClass="is-current"
 								smooth={true}
-								offset={-600}
+								offset={-200}
 								duration={500}
 								onClick={() => setIsOpen(false)}
 							>
@@ -83,7 +83,7 @@ export default function Navbar() {
 								spy={true}
 								activeClass="is-current"
 								smooth={true}
-								offset={-600}
+								offset={-200}
 								duration={500}
 								onClick={() => setIsOpen(false)}
 							>
@@ -93,12 +93,12 @@ export default function Navbar() {
 
 						<li className="py-2 text-center border-t border-b border-gray-200 relative lg:border-0">
 							<Link
-								to="section-5"
+								to="section-4"
 								className="cursor-pointer font-medium text-lg hover:text-primary"
 								spy={true}
 								activeClass="is-current"
 								smooth={true}
-								offset={-600}
+								offset={-200}
 								duration={500}
 								onClick={() => setIsOpen(false)}
 							>
