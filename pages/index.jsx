@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Presentation from '../components/Sections/Presentation/Presentation'
-import Experience from '../components/Sections/Experience/Experience'
+import Experiences from '../components/Sections/Experiences/Experiences'
+import Competences from '../components/Sections/Competences/Competences'
 export default function Home() {
   return (
     <div>
@@ -10,7 +11,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Presentation anchorScrollSpy="section-1" />
-      <Experience anchorScrollSpy="section-2" />
+      <Experiences anchorScrollSpy="section-2" />
+      <Competences anchorScrollSpy="section-3" />
     </div>
   )
 }

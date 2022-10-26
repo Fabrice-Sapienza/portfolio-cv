@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import humanDev from '../../../public/assets/humanDev.gif'
+import humanDev from '../../../public/assets/humanDevLeft.gif'
 
 export default function Presentation({ anchorScrollSpy }) {
 
@@ -20,8 +20,8 @@ export default function Presentation({ anchorScrollSpy }) {
                         <h3 className="text-3xl font-extrabold">À propos</h3>
                         <h4 className="text-xl font-bold my-3">Développeur Front-end React.js & intégrateur web</h4>
                         <p className="mb-2">Passionné de développement web, j'ai effectué une reconversion professionnelle en 2016.</p>
-                        <p className="mb-2">Je suis également très sensible à l'ergonomie, la fluidité et l'expérience utilisateur (UX) d'un site web.</p>
-                        <p className="mb-2"> je serais très heureux d'échanger avec vous ou bien discuter de belles opportunités professionnelles</p>
+                        <p className="mb-2">Etant autodidact et très sensible à la qualité du code, l'ergonomie, la fluidité et l'expérience utilisateur (UX) d'un site web, je n'hésite pas à me former régulièrement.</p>
+                        <p className="mb-2"> je serais très heureux de discuter avec vous de vos projets ou de belles opportunités professionnelles.</p>
                         <p className="md-2">N'hésitez pas à me <Link href='#contact'><a className='text-primary font-semibold'>contacter</a></Link>.</p>
                     </div>
                     <div>
