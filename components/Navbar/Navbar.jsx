@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react'
-import { Link } from 'react-scroll';
+import MenuList from './MenuList/MenuList'
 import { FaDownload } from "react-icons/fa";
 import logo from '../../public/assets/logo.png'
 
@@ -50,63 +50,10 @@ export default function Navbar() {
 						</button>
 					</div>
 					<ul className={`${!isOpen && 'hidden'} flex px-1 pt-6 flex-col lg:visible lg:flex lg:bg-transparent lg:pt-0 lg:flex-row lg:space-x-10 lg:w-auto lg:items-center lg:justify-center`}>
-						<li className="py-2 text-center border-t border-gray-200 relative lg:border-0">
-							<Link
-								to="section-1"
-								className="cursor-pointer font-medium text-lg hover:text-primary"
-								// spy={true}
-								// activeClass="is-current"
-								smooth={true}
-								offset={-150}
-								duration={500}
-								onClick={() => setIsOpen(false)}
-							>
-								À propos
-							</Link>
-						</li>
-						<li className="py-2 text-center border-t border-gray-200 relative lg:border-0">
-							<Link
-								to="section-2"
-								className="cursor-pointer font-medium text-lg hover:text-primary"
-								// spy={true}
-								// activeClass="is-current"
-								smooth={true}
-								offset={-150}
-								duration={500}
-								onClick={() => setIsOpen(false)}
-							>
-								Expériences
-							</Link>
-						</li>
-						<li className="py-2 text-center border-t border-gray-200 relative lg:border-0">
-							<Link
-								to="section-3"
-								className="cursor-pointer font-medium text-lg hover:text-primary"
-								// spy={true}
-								// activeClass="is-current"
-								smooth={true}
-								offset={-150}
-								duration={500}
-								onClick={() => setIsOpen(false)}
-							>
-								Compétences
-							</Link>
-						</li>
-
-						<li className="py-2 text-center border-t border-b border-gray-200 relative lg:border-0">
-							<Link
-								to="section-4"
-								className="cursor-pointer font-medium text-lg hover:text-primary"
-								// spy={true}
-								// activeClass="is-current"
-								smooth={true}
-								offset={-150}
-								duration={500}
-								onClick={() => setIsOpen(false)}
-							>
-								Contact
-							</Link>
-						</li>
+						<MenuList title="À propos" anchor="section-1" setIsOpen={() => setIsOpen(false)} />
+						<MenuList title="Expériences" anchor="section-2" setIsOpen={() => setIsOpen(false)} />
+						<MenuList title="Compétences" anchor="section-3" setIsOpen={() => setIsOpen(false)} />
+						<MenuList title="Contact" anchor="section-4" setIsOpen={() => setIsOpen(false)} />
 					</ul>
 					<div className={`${!isOpen && 'hidden'} flex justify-center items-center my-6 lg:my-0 lg:mx-3 lg:flex`} >
 						<button

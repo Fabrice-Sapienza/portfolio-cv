@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Portfolio Fabrice Sapienza - Développeur Front-End React JS</title>
+        <title>Fabrice Sapienza - Développeur Web Front-End React.JS</title>
         <meta name="description" content="Portfolio Fabrice Sapienza - Développeur Front-End React JS" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
