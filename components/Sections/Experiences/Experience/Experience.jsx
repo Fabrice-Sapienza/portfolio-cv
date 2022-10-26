@@ -1,10 +1,10 @@
 
 import PropTypes from 'prop-types';
 
-export default function Experience({ width, date, title, subTitle, list }) {
+export default function Experience({ date, title, subTitle, list }) {
     return (
         <>
-            <li className={`lg:w-[${width}]`}>
+            <li className="lg:w-[20%]">
                 <div className="flex lg:block flex-start items-center pt-2 lg:pt-0">
                     <div className="bg-secondary w-2 h-2 rounded-full -ml-1 lg:ml-0 mr-3 lg:mr-0 lg:-mt-1"></div>
                     <p className="text-gray-100 text-sm mt-2 font-semibold">{date}</p>
@@ -27,7 +27,6 @@ export default function Experience({ width, date, title, subTitle, list }) {
 }
 
 Experience.propTypes = {
-    width: PropTypes.string.isRequired,
     date: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     subTitle: PropTypes.string.isRequired,

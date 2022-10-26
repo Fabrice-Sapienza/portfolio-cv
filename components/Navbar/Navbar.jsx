@@ -30,7 +30,9 @@ export default function Navbar() {
 					<div className="flex justify-between items-center">
 
 						<div className='flex items-center justify-center'>
+
 							<img src={logo.src} alt="logo" className='w-16' />
+
 							<div className='text-center'>
 								<span className='ml-2 text-secondary text-2xl block font-thin'><span className='font-bold text-primary'>F</span>abrice <span className='font-bold text-primary'>S</span>apienza</span>
 							</div>
@@ -52,10 +54,10 @@ export default function Navbar() {
 							<Link
 								to="section-1"
 								className="cursor-pointer font-medium text-lg hover:text-primary"
-								spy={true}
-								activeClass="is-current"
+								// spy={true}
+								// activeClass="is-current"
 								smooth={true}
-								offset={-200}
+								offset={-150}
 								duration={500}
 								onClick={() => setIsOpen(false)}
 							>
@@ -66,10 +68,10 @@ export default function Navbar() {
 							<Link
 								to="section-2"
 								className="cursor-pointer font-medium text-lg hover:text-primary"
-								spy={true}
-								activeClass="is-current"
+								// spy={true}
+								// activeClass="is-current"
 								smooth={true}
-								offset={-200}
+								offset={-150}
 								duration={500}
 								onClick={() => setIsOpen(false)}
 							>
@@ -80,10 +82,10 @@ export default function Navbar() {
 							<Link
 								to="section-3"
 								className="cursor-pointer font-medium text-lg hover:text-primary"
-								spy={true}
-								activeClass="is-current"
+								// spy={true}
+								// activeClass="is-current"
 								smooth={true}
-								offset={-200}
+								offset={-150}
 								duration={500}
 								onClick={() => setIsOpen(false)}
 							>
@@ -95,10 +97,10 @@ export default function Navbar() {
 							<Link
 								to="section-4"
 								className="cursor-pointer font-medium text-lg hover:text-primary"
-								spy={true}
-								activeClass="is-current"
+								// spy={true}
+								// activeClass="is-current"
 								smooth={true}
-								offset={-200}
+								offset={-150}
 								duration={500}
 								onClick={() => setIsOpen(false)}
 							>
