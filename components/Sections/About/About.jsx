@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import { Link } from 'react-scroll';
 import humanDev from '../../../public/assets/humanDev.gif'
 
 export default function About({ anchorScrollSpy }) {
@@ -22,7 +22,9 @@ export default function About({ anchorScrollSpy }) {
                         <p className="mb-2">Passionné de développement web, j'ai effectué une reconversion professionnelle en 2016.</p>
                         <p className="mb-2">Etant autodidact et très sensible à la qualité du code, l'ergonomie, la fluidité et l'expérience utilisateur (UX) d'un site web, je n'hésite pas à me former régulièrement.</p>
                         <p className="mb-2">je serais très heureux de discuter avec vous de vos projets ou de belles opportunités professionnelles.</p>
-                        <p className="md-2">N'hésitez pas à me <Link href='#contact'><a className='text-primary font-semibold'>contacter</a></Link>.</p>
+                        <p className="md-2">
+                            N'hésitez pas à me <Link to="contact" href="#contact" smooth={true} offset={-150} duration={500} className="cursor-pointer text-primary font-semibold">contacter</Link>.
+                        </p>
                     </div>
                     <div>
                         <img src={humanDev.src} className="w-full shadow-2xl border" alt="Human developer" />

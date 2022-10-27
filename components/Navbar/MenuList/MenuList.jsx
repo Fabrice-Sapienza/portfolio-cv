@@ -7,6 +7,7 @@ export default function MenuList({ title, anchor, closeMenu }) {
             <li className="py-2 text-center border-t border-gray-200 relative lg:border-0">
                 <Link
                     to={anchor}
+                    href={`#${anchor}`}
                     className="cursor-pointer font-medium text-lg hover:text-primary"
                     // spy={true}
                     // activeClass="is-current"
