@@ -13,7 +13,7 @@ export default function Skills({ anchorScrollSpy }) {
           <Skill icon={(<FaCode className={iconClassName} />)} title='Langages et frameworks' text='JavaScript, React.Js, Redux, Recoil, NextJS, GatsbyJS, TailwindCSS, Bootstrap, Sass, Php, Wordpress, Symphony, MySql, MJML, HTML5, CSS3.' />
           <Skill icon={(<FaCogs className={iconClassName} />)} title='Outils et Autres' text='WebPack, Git, Npm, Jest, Enzyme, Visual Studio Code, WebStorm, Photoshop, Linux, Windows.' />
           <Skill icon={(<FaDesktop className={iconClassName} />)} title='Design' text='Développement mobile first, UX Design, Semantic-ui React, Material Mui, respect des standards, responsive design.' />
-          <Skill icon={(<FaProjectDiagram className={iconClassName} />)} title='Méthodes' text='Analyse, maintenance corrective et évolutive, méthode Agile Scrum, tests TDD / BDD.' />
+          <Skill icon={(<FaProjectDiagram className={iconClassName} />)} title='Méthodes' text='Analyse, maintenance corrective et évolutive, méthode Agile Scrum / Kanban, tests TDD / BDD.' />
         </div>
       </div>
     </section>
