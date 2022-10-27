@@ -27,7 +27,7 @@ export default function About({ anchorScrollSpy }) {
                         </p>
                     </div>
                     <div>
-                        <img src={humanDev.src} className="w-full shadow-2xl border" alt="Human developer" />
+                        <img src={humanDev.src} width="640" height="480" className="w-full shadow-2xl border" alt="Human developer" />
                     </div>
                 </div>
             </div >
