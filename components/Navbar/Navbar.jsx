@@ -1,7 +1,9 @@
 import { useState, useEffect, useRef } from 'react'
 import MenuList from './MenuList/MenuList'
-import { FaDownload } from "react-icons/fa";
+import { MdOutlineFileDownload } from "react-icons/md";
 import logo from '../../public/assets/logo.png'
+
+
 
 
 export default function Navbar() {
@@ -50,16 +52,16 @@ export default function Navbar() {
 						</button>
 					</div>
 					<ul className={`${!isOpen && 'hidden'} flex px-1 pt-6 flex-col lg:visible lg:flex lg:bg-transparent lg:pt-0 lg:flex-row lg:space-x-10 lg:w-auto lg:items-center lg:justify-center`}>
-						<MenuList title="À propos" anchor="section-1" setIsOpen={() => setIsOpen(false)} />
-						<MenuList title="Expériences" anchor="section-2" setIsOpen={() => setIsOpen(false)} />
-						<MenuList title="Compétences" anchor="section-3" setIsOpen={() => setIsOpen(false)} />
-						<MenuList title="Contact" anchor="section-4" setIsOpen={() => setIsOpen(false)} />
+						<MenuList title="À propos" anchor="about" closeMenu={() => setIsOpen(false)} />
+						<MenuList title="Expériences" anchor="careers" closeMenu={() => setIsOpen(false)} />
+						<MenuList title="Compétences" anchor="skills" closeMenu={() => setIsOpen(false)} />
+						<MenuList title="Contact" anchor="contact" closeMenu={() => setIsOpen(false)} />
 					</ul>
 					<div className={`${!isOpen && 'hidden'} flex justify-center items-center my-6 lg:my-0 lg:mx-3 lg:flex`} >
 						<button
-							className="p-3 font-medium text-center text-sm ounded-sm transition duration-150 ease-in-out border border-primary text-primary bg-white hover:shadow-lg"
+							className="flex items-center justify-center p-3 font-medium text-sm ounded-sm transition duration-150 ease-in-out border border-secondary text-secondary bg-white shadow-md hover:border-primary hover:text-primary hover:shadow-lg"
 						>
-							Télécharger CV <FaDownload className='inline' />
+							Télécharger CV <MdOutlineFileDownload className='inline text-xl' />
 						</button>
 					</div>
 				</nav>

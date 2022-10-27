@@ -2,7 +2,7 @@
 export default function Form() {
     return (
         <>
-            <form className="space-y-6">
+            <form className="space-y-6 w-full max-w-xl">
 
                 <div className="relative">
                     <input id="prenom" name="prenom" type="text"

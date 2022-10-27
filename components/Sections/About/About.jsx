@@ -1,7 +1,7 @@
 import Link from 'next/link'
-import humanDev from '../../../public/assets/humanDevLeft.gif'
+import humanDev from '../../../public/assets/humanDev.gif'
 
-export default function Presentation({ anchorScrollSpy }) {
+export default function About({ anchorScrollSpy }) {
 
     return (
         <section className="bg-custom text-secondary" id={anchorScrollSpy}>
@@ -12,7 +12,7 @@ export default function Presentation({ anchorScrollSpy }) {
                 </span>
             </h1>
             <h2 className="text-center font-extralight text-3xl">React.js / Javascript</h2>
-            <div className="container text-center px-6 mx-auto py-10 lg:py-36 lg:text-left xl:px-32">
+            <div className="container text-center px-6 mx-auto py-10 lg:pb-36 lg:pt-24 lg:text-left xl:px-32">
                 <div className="grid items-center lg:grid-cols-2">
                     <div
                         className="relative block shadow-lg px-6 py-12 z-10 bg-white lg:bg-inherit lg:bg-['hsla(0, 0%, 100%, 0.55)'] lg:backdrop-blur-[30px] mb-4 md:mb-12 md:px-10 lg:mb-0 lg:-mr-14"
@@ -21,11 +21,11 @@ export default function Presentation({ anchorScrollSpy }) {
                         <h4 className="text-xl font-bold my-3">Développeur Front-end React.js & intégrateur web</h4>
                         <p className="mb-2">Passionné de développement web, j'ai effectué une reconversion professionnelle en 2016.</p>
                         <p className="mb-2">Etant autodidact et très sensible à la qualité du code, l'ergonomie, la fluidité et l'expérience utilisateur (UX) d'un site web, je n'hésite pas à me former régulièrement.</p>
-                        <p className="mb-2"> je serais très heureux de discuter avec vous de vos projets ou de belles opportunités professionnelles.</p>
+                        <p className="mb-2">je serais très heureux de discuter avec vous de vos projets ou de belles opportunités professionnelles.</p>
                         <p className="md-2">N'hésitez pas à me <Link href='#contact'><a className='text-primary font-semibold'>contacter</a></Link>.</p>
                     </div>
                     <div>
-                        <img src={humanDev.src} className="w-full shadow-2xl border" alt="human dev" />
+                        <img src={humanDev.src} className="w-full shadow-2xl border" alt="Human developer" />
                     </div>
                 </div>
             </div >

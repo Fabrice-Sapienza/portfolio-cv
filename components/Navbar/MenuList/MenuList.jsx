@@ -1,6 +1,7 @@
+import PropTypes from 'prop-types';
 import { Link } from 'react-scroll';
 
-export default function Menu({ title, anchor, setIsOpen }) {
+export default function MenuList({ title, anchor, closeMenu }) {
     return (
         <>
             <li className="py-2 text-center border-t border-gray-200 relative lg:border-0">
@@ -12,11 +13,17 @@ export default function Menu({ title, anchor, setIsOpen }) {
                     smooth={true}
                     offset={-150}
                     duration={500}
-                    onClick={setIsOpen}
+                    onClick={closeMenu}
                 >
                     {title}
                 </Link>
             </li>
         </>
     )
+}
+
+MenuList.propTypes = {
+    title: PropTypes.string.isRequired,
+    anchor: PropTypes.string.isRequired,
+    closeMenu: PropTypes.func.isRequired,
 }
