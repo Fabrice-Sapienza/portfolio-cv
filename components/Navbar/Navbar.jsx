@@ -12,7 +12,6 @@ export default function Navbar() {
     if (isOpen) {
       function handleClickOutside(event) {
         if (refMenu.current && !refMenu.current.contains(event.target)) {
-          console.log('hi');
           setIsOpen(false);
         }
       }
