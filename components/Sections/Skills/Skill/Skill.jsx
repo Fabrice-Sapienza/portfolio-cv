@@ -1,18 +1,17 @@
 import PropTypes from 'prop-types';
 
 export default function Skill({ icon, title, text }) {
-
-    return (
-        <div className="flex flex-col justify-start items-center text-center">
-            {icon}
-            <h3 className="font-bold text-lg my-2">{title}</h3>
-            <p className="font-medium text-sm">{text}</p>
-        </div>
-    )
+  return (
+    <div className="flex flex-col justify-start items-center text-center">
+      {icon}
+      <h3 className="font-bold text-lg my-2">{title}</h3>
+      <p className="font-medium text-sm">{text}</p>
+    </div>
+  );
 }
 
 Skill.propTypes = {
-    icon: PropTypes.element.isRequired,
-    title: PropTypes.string.isRequired,
-    text: PropTypes.string.isRequired,
-}
+  icon: PropTypes.element.isRequired,
+  title: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
+};
