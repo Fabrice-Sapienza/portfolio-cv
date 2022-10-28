@@ -14,7 +14,7 @@ export default function useOnClickOutside(ref, isOpen, handler) {
         document.removeEventListener("click", listener);
       };
     },
-    [ref, handler]
+    [ref, isOpen, handler]
   );
 
 }
