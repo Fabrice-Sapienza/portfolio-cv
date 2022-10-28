@@ -53,11 +53,12 @@ export default function Career({ anchorScrollSpy }) {
           <CareerItem
             date="2022"
             title="École O'clock"
-            subTitle="Formation"
+            subTitle="Formation avancée"
             list={[
               'ReactJS',
-              'React-Redux / Recoil',
+              'React-Redux / Recoil / Context',
               'Hooks / Reducer',
+              'React-Router',
               'Architecture complexe',
               'JWT',
               'Tests, TDD / BDD',
