@@ -1,10 +1,13 @@
 import { useState, useRef } from 'react';
+import Link from 'next/link';
 import useOnClickOutside from '../hooks/useOnClickOutside';
 
 import MenuItem from './MenuItem';
 import BurgerMobile from './BurgerMobile';
 import LogoBrand from './LogoBrand';
-import ButtonCv from './ButtonCv';
+import Button from '../Button/Button';
+
+import { MdOutlineFileDownload } from 'react-icons/md';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -33,7 +36,21 @@ export default function Navbar() {
             <MenuItem title="Compétences" anchor="skill" closeMenu={() => setIsOpen(false)} />
             <MenuItem title="Contact" anchor="contact" closeMenu={() => setIsOpen(false)} />
           </ul>
-          <ButtonCv isOpen={isOpen} />
+          <div
+            className={`${
+              !isOpen && 'hidden'
+            } flex justify-center items-center my-6 lg:my-0 lg:mx-3 lg:flex`}
+          >
+            <Button
+              onClick={() => setIsOpen(false)}
+            >
+              <Link href="https://drive.google.com/file/d/1F6R25Iz7RV_FwjBb153rg4HOtO3tzeef/view?usp=sharing">
+                <a target="_blank" className="flex items-center justify-center">
+                  Télécharger CV <MdOutlineFileDownload className="inline text-xl" />
+                </a>
+              </Link>
+            </Button>
+          </div>
         </nav>
       </header>
     </>
