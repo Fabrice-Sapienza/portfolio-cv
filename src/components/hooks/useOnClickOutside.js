@@ -7,7 +7,6 @@ export default function useOnClickOutside(ref, isOpen, handler) {
         if (!ref.current || ref.current.contains(event.target) || !isOpen) {
           return;
         }
-        console.log('hi');
         handler(event);
       };
       document.addEventListener("click", listener);
