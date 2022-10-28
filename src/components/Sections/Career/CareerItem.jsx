@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-export default function Career({ date, title, subTitle, list }) {
+export default function CareerItem({ date, title, subTitle, list }) {
   return (
     <>
       <li className="lg:w-[20%]">
@@ -22,7 +22,7 @@ export default function Career({ date, title, subTitle, list }) {
   );
 }
 
-Career.propTypes = {
+CareerItem.propTypes = {
   date: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   subTitle: PropTypes.string.isRequired,

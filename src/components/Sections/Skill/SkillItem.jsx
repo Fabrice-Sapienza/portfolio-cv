@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-export default function Skill({ icon, title, text }) {
+export default function SkillItem({ icon, title, text }) {
   return (
     <div className="flex flex-col justify-start items-center text-center">
       {icon}
@@ -10,7 +10,7 @@ export default function Skill({ icon, title, text }) {
   );
 }
 
-Skill.propTypes = {
+SkillItem.propTypes = {
   icon: PropTypes.element.isRequired,
   title: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,

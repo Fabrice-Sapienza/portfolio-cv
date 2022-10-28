@@ -1,8 +1,8 @@
 import Head from 'next/head';
-import About from '../components/Sections/About/About';
-import Careers from '../components/Sections/Careers/Careers';
-import Skills from '../components/Sections/Skills/Skills';
-import Contact from '../components/Sections/Contact/Contact';
+import About from '../src/components/Sections/About/About';
+import Career from '../src/components/Sections/Career/Career';
+import Skill from '../src/components/Sections/Skill/Skill';
+import Contact from '../src/components/Sections/Contact/Contact';
 export default function Home() {
   return (
     <>
@@ -21,8 +21,8 @@ export default function Home() {
         <meta name="theme-color" content="#fefefe" />
       </Head>
       <About anchorScrollSpy="about" />
-      <Careers anchorScrollSpy="careers" />
-      <Skills anchorScrollSpy="skills" />
+      <Career anchorScrollSpy="career" />
+      <Skill anchorScrollSpy="skill" />
       <Contact anchorScrollSpy="contact" />
     </>
   );

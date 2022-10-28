@@ -1,14 +1,14 @@
-import Career from './Career/Career';
+import CareerItem from './CareerItem';
 
-export default function Careers({ anchorScrollSpy }) {
+export default function Career({ anchorScrollSpy }) {
   return (
     <section
-      className="bg-secondary text-primary flex justify-center items-center flex-col"
       id={anchorScrollSpy}
+      className="bg-secondary text-primary flex justify-center items-center flex-col"
     >
       <div className="container p-4 md:py-32">
         <ol className="border-l lg:border-l-0 lg:border-t border-white lg:flex lg:justify-center lg:gap-6">
-          <Career
+          <CareerItem
             date="2004 - 2015"
             title="Entreprise Sapienza"
             subTitle="CDI / Gérant"
@@ -16,19 +16,19 @@ export default function Careers({ anchorScrollSpy }) {
               "Peinture et revêtement de sol sur le site Airbus Helicopters au sein de l'entreprise familliale.",
             ]}
           />
-          <Career
+          <CareerItem
             date="2015"
             title="Slap Digital - Paris"
             subTitle="Stagiaire Développeur Web"
             list={['Intégration Emailing', "Développement et intégration d'outils en PHP/HTML/CSS"]}
           />
-          <Career
+          <CareerItem
             date="2016"
             title="École 3W Academy"
             subTitle="Formation développeur intégrateur d'application web"
             list={['Diplôme RNCP niveau 3', 'JavaScript', 'PHP', 'MySQL', 'HTML / CSS']}
           />
-          <Career
+          <CareerItem
             date="2016 - 2019"
             title="Manageo"
             subTitle="Développeur et Intégrateur Web"
@@ -39,7 +39,7 @@ export default function Careers({ anchorScrollSpy }) {
               'Formation et encadrement de personnel interne et international',
             ]}
           />
-          <Career
+          <CareerItem
             date="2019 - 2021"
             title="Manageo"
             subTitle="Développeur React.JS"
@@ -50,7 +50,7 @@ export default function Careers({ anchorScrollSpy }) {
               'Participation aux chiffrages, poker planning, rétrospective de sprint',
             ]}
           />
-          <Career
+          <CareerItem
             date="2022"
             title="École O'clock"
             subTitle="Formation"

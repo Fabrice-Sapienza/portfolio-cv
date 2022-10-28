@@ -1,14 +1,14 @@
 import PropTypes from 'prop-types';
 import { Link } from 'react-scroll';
 
-export default function MenuList({ title, anchor, closeMenu }) {
+export default function MenuItem({ title, anchor, closeMenu }) {
   return (
     <>
       <li className="py-2 text-center border-t border-gray-200 relative lg:border-0">
         <Link
           to={anchor}
           href={`#${anchor}`}
-          className="cursor-pointer font-medium text-lg hover:text-primary"
+          className="cursor-pointer font-medium text-lg transition-all duration-200 hover:text-primary "
           // spy={true}
           // activeClass="is-current"
           smooth={true}
@@ -23,7 +23,7 @@ export default function MenuList({ title, anchor, closeMenu }) {
   );
 }
 
-MenuList.propTypes = {
+MenuItem.propTypes = {
   title: PropTypes.string.isRequired,
   anchor: PropTypes.string.isRequired,
   closeMenu: PropTypes.func.isRequired,
