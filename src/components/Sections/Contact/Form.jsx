@@ -11,17 +11,16 @@ export default function Form() {
   } = useForm();
 
   const onSubmit = (data) => {
-    console.log(`ENV: ${process.env.EMAILJS_SERVICE_ID}`);
     axios
       .post('https://api.emailjs.com/api/v1.0/email/send', {
-        service_id: process.env.EMAILJS_SERVICE_ID,
-        template_id: process.env.EMAILJS_TEMPLATE_ID,
+        service_id: process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+        template_id: process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
         template_params: {
           name: data.nom,
           email: data.email,
           message: data.message,
         },
-        user_id: process.env.EMAILJS_USER_ID,
+        user_id: process.env.NEXT_PUBLIC_EMAILJS_USER_ID,
       })
       .then((response) => {
         console.log(response);
