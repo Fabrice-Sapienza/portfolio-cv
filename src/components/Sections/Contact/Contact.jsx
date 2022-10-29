@@ -1,6 +1,5 @@
 import CardProfile from './CardProfile';
-import CardContact from './CardContact';
-
+import Form from './Form';
 export default function Contact({ anchorScrollSpy }) {
   return (
     <section id={anchorScrollSpy} className="bg-custom border-t-2 border-secondary py-6 lg:p-10">
@@ -10,10 +9,14 @@ export default function Contact({ anchorScrollSpy }) {
       <p className="text-center my-6 px-2">
         Toujours disponible pour des beaux projets ou des opportunités professionnelles.
       </p>
-      <div className="flex items-center justify-center mb-6">
-        <CardProfile />
+      <div className="max-w-2xl mx-auto grid grid-cols-1 md:grid-cols-[250px_1fr] md:gap-x-4">
+        <div className="w-[250px] mx-auto">
+          <CardProfile />
+        </div>
+        <div className="w-full mx-auto bg-white rounded-lg shadow-lg p-4 mt-4 md:w-[450px] md:mt-0">
+          <Form />
+        </div>
       </div>
-      <CardContact />
     </section>
   );
 }
