@@ -41,10 +41,8 @@ export default function Navbar() {
               !isOpen && 'hidden'
             } flex justify-center items-center my-6 lg:my-0 lg:mx-3 lg:flex`}
           >
-            <Button
-              onClick={() => setIsOpen(false)}
-            >
-              <Link href="https://drive.google.com/file/d/1F6R25Iz7RV_FwjBb153rg4HOtO3tzeef/view?usp=sharing">
+            <Button onClick={() => setIsOpen(false)}>
+              <Link href="./doc/CV_fabrice-sapienza.pdf">
                 <a target="_blank" className="flex items-center justify-center">
                   Télécharger CV <MdOutlineFileDownload className="inline text-xl" />
                 </a>

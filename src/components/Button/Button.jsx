@@ -15,7 +15,7 @@ export default function Button({ children, ...props }) {
 
 Button.propTypes = {
   children: PropTypes.oneOfType([PropTypes.string, PropTypes.element]).isRequired,
-  props: PropTypes.any,
+  props: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
 };
 
 Button.defaultProps = {

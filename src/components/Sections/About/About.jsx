@@ -23,12 +23,12 @@ export default function About({ anchorScrollSpy }) {
               2016.
             </p>
             <p className="mb-2">
-              Etant autodidact et très sensible à la qualité du code, l’ergonomie, la fluidité et
+              Étant autodidacte et très sensible à la qualité du code, l’ergonomie, la fluidité et
               l’expérience utilisateur (UX) d’un site web, je n’hésite pas à me former
               régulièrement.
             </p>
             <p className="mb-2">
-              je serais très heureux de discuter avec vous de vos projets ou de belles opportunités
+              Je serais très heureux de discuter avec vous de vos projets ou de belles opportunités
               professionnelles.
             </p>
             <p className="md-2">
