@@ -1,55 +1,72 @@
+import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
+
+import CardAlert from '../../CardAlert/CardAlert';
 import Button from '../../Button/Button';
+import { BiLoader } from 'react-icons/bi';
 
 export default function Form() {
+  const [loader, setLoader] = useState(false);
+  const [submitSuccess, setSubmitSuccess] = useState(null);
+
   const {
     register,
     handleSubmit,
-    resetField,
+    reset,
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (data) => {
-    axios
+  const onSubmit = async (data) => {
+    setLoader(true);
+    await axios
       .post('https://api.emailjs.com/api/v1.0/email/send', {
         service_id: process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
         template_id: process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
         template_params: {
-          name: data.nom,
+          name: data.name,
           email: data.email,
           message: data.message,
         },
         user_id: process.env.NEXT_PUBLIC_EMAILJS_USER_ID,
       })
-      .then((response) => {
-        console.log(response);
-        resetField('nom');
-        resetField('email');
-        resetField('message');
+      .then(() => {
+        reset({
+          name: '',
+          email: '',
+          message: '',
+        });
+        setSubmitSuccess(true);
       })
       .catch((error) => {
+        setSubmitSuccess(false);
         console.log(error);
       });
+    setLoader(false);
   };
 
   return (
     <>
-      <form onSubmit={handleSubmit(onSubmit)} className="space-y-6 w-full">
+      <form onSubmit={handleSubmit(onSubmit)} className="space-y-6 w-full relative">
+        {loader && (
+          <div className="z-20 absolute top-0 bottom-0 right-0 left-0 bg-white/70 flex items-center justify-center">
+            <BiLoader className="animate-spin-slow text-secondary text-3xl" />
+          </div>
+        )}
         <div className="relative">
           <input
             className="w-full h-10 text-secondary placeholder-transparent border-b border-gray-300 peer focus:outline-none focus:border-b-2 focus:border-primary text-sm"
             placeholder="Nom"
-            id="nom"
-            name="nom"
+            id="name"
+            name="name"
             type="text"
-            {...register('nom', { required: true })}
+            {...register('name', { required: true })}
           />
-          {errors.nom && (
+          {errors?.name && (
             <span className="text-xs text-red-600">Veuillez renseigner ce champ.</span>
           )}
           <label
-            htmlFor="nom"
+            htmlFor="name"
             className="absolute left-0 -top-3.5 text-gray-600 text-sm transition-all peer-placeholder-shown:text-sm peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-3.5 peer-focus:text-primary peer-focus:font-semibold peer-focus:text-sm"
           >
             Nom
@@ -88,7 +105,7 @@ export default function Form() {
             type="text"
             {...register('message', { required: true })}
           />
-          {errors.message && (
+          {errors?.message && (
             <span className="text-xs text-red-600">Veuillez renseigner ce champ.</span>
           )}
           <label
@@ -97,11 +114,27 @@ export default function Form() {
           >
             Votre Message
           </label>
+          {submitSuccess && (
+            <CardAlert
+              text="Votre message à bien été envoyé, merci !"
+              type="success"
+              closeCard={() => setSubmitSuccess(null)}
+            />
+          )}
+          {submitSuccess === false && (
+            <CardAlert
+              text="Désolé, votre message n'a pu être envoyé, réessayé ultérieurement."
+              type="danger"
+              closeCard={() => setSubmitSuccess(null)}
+            />
+          )}
         </div>
 
         <div className="text-center md:text-left">
           <Button type="submit" style={{ width: '100%' }}>
-            Envoyer
+            <div target="_blank" className="flex items-center justify-center">
+              Envoyer
+            </div>
           </Button>
         </div>
       </form>
