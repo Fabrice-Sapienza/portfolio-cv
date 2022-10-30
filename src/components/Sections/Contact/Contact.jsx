@@ -13,7 +13,7 @@ export default function Contact({ anchorScrollSpy }) {
         <div className="w-[250px] mx-auto">
           <CardProfile />
         </div>
-        <div className="w-full mx-auto bg-white rounded-lg shadow-lg p-4 mt-4 md:w-[450px] md:mt-0">
+        <div className="w-full mx-auto bg-white rounded-lg shadow-lg px-4 py-6 mt-4 md:w-[450px] md:mt-0">
           <Form />
         </div>
       </div>
