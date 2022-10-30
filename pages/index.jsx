@@ -3,6 +3,7 @@ import About from '../src/components/Sections/About/About';
 import Career from '../src/components/Sections/Career/Career';
 import Skill from '../src/components/Sections/Skill/Skill';
 import Contact from '../src/components/Sections/Contact/Contact';
+
 export default function Home() {
   return (
     <>

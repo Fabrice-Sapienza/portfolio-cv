@@ -1,14 +1,13 @@
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
-
 import CardAlert from '../../CardAlert/CardAlert';
 import Button from '../../Button/Button';
 import { BiLoader } from 'react-icons/bi';
 
 export default function Form() {
   const [loader, setLoader] = useState(false);
-  const [submitSuccess, setSubmitSuccess] = useState(null);
+  const [statusSubmitting, setStatusSubmitting] = useState(null);
 
   const {
     register,
@@ -20,15 +19,8 @@ export default function Form() {
   const onSubmit = async (data) => {
     setLoader(true);
     await axios
-      .post('https://api.emailjs.com/api/v1.0/email/send', {
-        service_id: process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
-        template_id: process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
-        template_params: {
-          name: data.name,
-          email: data.email,
-          message: data.message,
-        },
-        user_id: process.env.NEXT_PUBLIC_EMAILJS_USER_ID,
+      .post('/api/mail', {
+        data,
       })
       .then(() => {
         reset({
@@ -36,10 +28,10 @@ export default function Form() {
           email: '',
           message: '',
         });
-        setSubmitSuccess(true);
+        setStatusSubmitting(true);
       })
       .catch((error) => {
-        setSubmitSuccess(false);
+        setStatusSubmitting(false);
         console.log(error);
       });
     setLoader(false);
@@ -57,7 +49,6 @@ export default function Form() {
           <input
             className="w-full h-10 text-secondary placeholder-transparent border-b border-gray-300 peer focus:outline-none focus:border-b-2 focus:border-primary text-sm"
             placeholder="Nom"
-            id="name"
             name="name"
             type="text"
             {...register('name', { required: true })}
@@ -100,7 +91,6 @@ export default function Form() {
           <textarea
             className="w-full h-48 text-secondary placeholder-transparent border-b border-gray-300 peer pt-2 focus:outline-none focus:border-b-2 focus:border-primary text-sm"
             placeholder="Votre message"
-            id="message"
             name="message"
             type="text"
             {...register('message', { required: true })}
@@ -114,18 +104,18 @@ export default function Form() {
           >
             Votre Message
           </label>
-          {submitSuccess && (
+          {statusSubmitting && (
             <CardAlert
               text="Votre message à bien été envoyé, merci !"
               type="success"
-              closeCard={() => setSubmitSuccess(null)}
+              closeCard={() => setStatusSubmitting(null)}
             />
           )}
-          {submitSuccess === false && (
+          {statusSubmitting === false && (
             <CardAlert
               text="Désolé, votre message n'a pu être envoyé, réessayé ultérieurement."
               type="danger"
-              closeCard={() => setSubmitSuccess(null)}
+              closeCard={() => setStatusSubmitting(null)}
             />
           )}
         </div>
