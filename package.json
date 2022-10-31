@@ -8,8 +8,13 @@
     "start": "next start",
     "lint": "next lint"
   },
+  "author": "Fabrice Sapienza",
+  "description": "Next.js starter styled with Tailwind CSS",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fabrice-Sapienza/portfolio-cv.git"
+  },
   "dependencies": {
-    "@heroicons/react": "^2.0.12",
     "axios": "^1.1.3",
     "next": "12.3.1",
     "react": "18.2.0",

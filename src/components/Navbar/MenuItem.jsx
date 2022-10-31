@@ -8,7 +8,7 @@ export default function MenuItem({ title, anchor, closeMenu }) {
         <Link
           to={anchor}
           href={`#${anchor}`}
-          className="cursor-pointer font-medium text-lg transition-all duration-200 hover:text-primary "
+          className="cursor-pointer font-medium text-lg transition-all duration-200 hover:text-primary"
           // spy={true}
           // activeClass="is-current"
           smooth={true}

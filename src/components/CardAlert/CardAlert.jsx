@@ -1,4 +1,6 @@
-export default function CardAlertSubmit({ text, type, closeCard }) {
+import PropTypes from 'prop-types';
+
+export default function CardAlert({ text, type, closeCard }) {
   const styleColor = (color) => {
     switch (color) {
       case 'success':
@@ -72,3 +74,9 @@ export default function CardAlertSubmit({ text, type, closeCard }) {
     </div>
   );
 }
+
+CardAlert.propTypes = {
+  text: PropTypes.string.isRequired,
+  type: PropTypes.string.isRequired,
+  closeCard: PropTypes.func.isRequired,
+};

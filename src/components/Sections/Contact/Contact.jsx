@@ -2,7 +2,7 @@ import CardProfile from './CardProfile';
 import Form from './Form';
 export default function Contact({ anchorScrollSpy }) {
   return (
-    <section id={anchorScrollSpy} className="bg-custom border-t-2 border-secondary py-6 lg:p-10">
+    <section id={anchorScrollSpy} className="bg-custom shadow-inner py-6 lg:p-10">
       <h2 className="text-secondary text-center font-medium text-3xl md:text-4xl">
         Rentrons en contact
       </h2>

@@ -39,7 +39,7 @@ export default function Form() {
 
   return (
     <>
-      <form onSubmit={handleSubmit(onSubmit)} className="space-y-6 w-full relative">
+      <form onSubmit={handleSubmit(onSubmit)} className="space-y-5 w-full relative">
         {loader && (
           <div className="z-20 absolute top-0 bottom-0 right-0 left-0 bg-white/70 flex items-center justify-center">
             <BiLoader className="animate-spin-slow text-secondary text-3xl" />

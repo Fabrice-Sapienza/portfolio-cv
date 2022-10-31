@@ -4,10 +4,10 @@ export default function Career({ anchorScrollSpy }) {
   return (
     <section
       id={anchorScrollSpy}
-      className="bg-secondary text-primary flex justify-center items-center flex-col"
+      className="bg-secondary text-primary flex flex-col justify-center items-center"
     >
       <div className="container p-4 md:py-32">
-        <ol className="border-l lg:border-l-0 lg:border-t border-white lg:flex lg:justify-center lg:gap-6">
+        <ol className="border-white border-l lg:border-l-0 lg:border-t lg:flex lg:justify-center lg:gap-6">
           <CareerItem
             date="2004 - 2015"
             title="Entreprise Sapienza"
