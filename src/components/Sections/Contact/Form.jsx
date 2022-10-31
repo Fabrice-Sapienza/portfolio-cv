@@ -47,6 +47,7 @@ export default function Form() {
         )}
         <div className="relative">
           <input
+            disabled={loader && true}
             className="w-full h-10 text-secondary placeholder-transparent border-b border-gray-300 peer focus:outline-none focus:border-b-2 focus:border-primary text-sm"
             placeholder="Nom"
             name="name"
@@ -54,7 +55,7 @@ export default function Form() {
             {...register('name', { required: true })}
           />
           {errors?.name && (
-            <span className="text-xs text-red-600">Veuillez renseigner ce champ.</span>
+            <span className="text-xs text-red-600">Oops, indiquez moi votre nom.</span>
           )}
           <label
             htmlFor="name"
@@ -65,14 +66,15 @@ export default function Form() {
         </div>
         <div className="relative">
           <input
+            disabled={loader && true}
             className="w-full h-10 text-secondary placeholder-transparent border-b border-gray-300 peer focus:outline-none focus:border-b-2 focus:border-primary text-sm"
             placeholder="Email"
             {...register('email', {
-              required: 'Veuillez renseigner une adresse email.',
+              required: "Afin de pouvoir vous répondre, merci d'indiquer votre adresse email.",
               pattern: {
                 value:
                   /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-                message: 'Veuillez renseigner une adresse email valide.',
+                message: 'Je risque de ne pas pouvoir vous répondre avec cette adresse mail.',
               },
             })}
             type="email"
@@ -89,6 +91,7 @@ export default function Form() {
         </div>
         <div className="relative">
           <textarea
+            disabled={loader && true}
             className="w-full h-48 text-secondary placeholder-transparent border-b border-gray-300 peer pt-2 focus:outline-none focus:border-b-2 focus:border-primary text-sm"
             placeholder="Votre message"
             name="message"
@@ -96,7 +99,9 @@ export default function Form() {
             {...register('message', { required: true })}
           />
           {errors?.message && (
-            <span className="text-xs text-red-600">Veuillez renseigner ce champ.</span>
+            <span className="text-xs text-red-600">
+              Je crois que dans la précipitation, vous avez oublié votre message.
+            </span>
           )}
           <label
             htmlFor="message"
@@ -113,7 +118,7 @@ export default function Form() {
           )}
           {statusSubmitting === false && (
             <CardAlert
-              text="Désolé, votre message n'a pu être envoyé, réessayé ultérieurement."
+              text="Oops, votre message n'a pu être envoyé, réessayé ultérieurement ou contactez moi directement avec les coordonnées indiquées sur la carte."
               type="danger"
               closeCard={() => setStatusSubmitting(null)}
             />
@@ -121,7 +126,11 @@ export default function Form() {
         </div>
 
         <div className="text-center md:text-left">
-          <Button type="submit" style={{ width: '100%' }}>
+          <Button
+            type="submit"
+            style={{ width: '100%', cursor: `${loader ? 'not-allowed' : 'pointer'}` }}
+            disabled={loader && true}
+          >
             <div target="_blank" className="flex items-center justify-center">
               Envoyer
             </div>
