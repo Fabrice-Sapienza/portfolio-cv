@@ -7,29 +7,30 @@ export default function Skill({ anchorScrollSpy }) {
   return (
     <section
       id={anchorScrollSpy}
-      className="text-secondary bg-white flex justify-center items-center py-16 lg:py-24"
+      className="text-secondary bg-white flex justify-center items-center py-16"
     >
       <div className="container p-2">
+        <h2 className="text-center text-4xl font-extrabold mb-16">Mes compétences</h2>
         <div className="grid grid-cols-2 content-start gap-x-4 gap-y-6 lg:grid-cols-4">
           <SkillItem
             icon={<FaCode className={iconClassName} />}
             title="Langages et frameworks"
-            text="JavaScript, React.Js, Redux, Recoil, NextJS, GatsbyJS, TailwindCSS, Bootstrap, Sass, Php, Wordpress, Symphony, MySql, MJML, HTML5, CSS3."
+            text="React.Js, JavaScript, Redux, Recoil, NextJS, GatsbyJS, Jest, Enzyme, TailwindCSS, Bootstrap, CSS Grid, Sass, MySql, MJML, HTML, CSS"
           />
           <SkillItem
             icon={<FaCogs className={iconClassName} />}
             title="Outils et Autres"
-            text="WebPack, Git, Npm, Jest, Enzyme, Visual Studio Code, WebStorm, Photoshop, Linux, Windows."
+            text="WebPack, Git, Npm, Visual Studio Code, WebStorm, Photoshop, Linux, Windows"
           />
           <SkillItem
             icon={<FaDesktop className={iconClassName} />}
             title="Design"
-            text="Développement mobile first, UX Design, Semantic-ui React, Material Mui, respect des standards, responsive design."
+            text="Développement mobile first, UX Design, Semantic-ui React, Material Mui, respect des standards, responsive design"
           />
           <SkillItem
             icon={<FaProjectDiagram className={iconClassName} />}
             title="Méthodes"
-            text="Analyse, maintenance corrective et évolutive, méthode Agile Scrum / Kanban, tests TDD / BDD."
+            text="Analyse, chiffrage, maintenance corrective et évolutive, méthode Agile Scrum / Kanban, tests TDD / BDD"
           />
         </div>
       </div>

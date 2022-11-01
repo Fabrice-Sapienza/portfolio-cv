@@ -3,7 +3,7 @@ import humanDev from '../../../../public/assets/humanDev.gif';
 
 export default function About({ anchorScrollSpy }) {
   return (
-    <section id={anchorScrollSpy} className="bg-custom text-secondary">
+    <section id={anchorScrollSpy} className="bg-custom">
       <h1 className="text-center font-extrabold text-5xl mb-2 pt-28 md:text-6xl word-spacing">
         <span className="my-3">Développeur</span>
         <span className="my-3 ml-3 before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-primary relative inline-block">

@@ -37,7 +37,7 @@ export default function CardAlert({ text, type, closeCard }) {
   };
 
   return (
-    <div className={`flex p-4 mb-4 rounded-lg ${styleColor(type).bgColor}`}>
+    <div className={`flex p-4 rounded-lg ${styleColor(type).bgColor}`}>
       <svg
         aria-hidden="true"
         className={`flex-shrink-0 w-5 h-5 ${styleColor(type).textColor}`}

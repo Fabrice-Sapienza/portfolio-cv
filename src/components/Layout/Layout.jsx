@@ -4,7 +4,7 @@ import Navbar from '../Navbar/Navbar';
 
 export default function Layout({ children }) {
   return (
-    <div className="font-OpenSans">
+    <div className="font-OpenSans text-secondary">
       <Navbar />
       {children}
       <Footer />

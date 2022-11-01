@@ -27,7 +27,7 @@ export default function CardProfile() {
       <div className="p-5 pt-1">
         <h3 className="text-lg font-bold mb-1">Fabrice Sapienza</h3>
         <p className="text-sm text-gray-500 mb-3">Développeur Front-end</p>
-        <ul className="list-inside flex flex-col mx-auto justify-start space-y-2">
+        <ul className="list-inside flex flex-col mx-auto justify-start space-y-4">
           <li>
             <Link href="tel:+33627149514">
               <a className="flex items-center text-xs text-secondary">
@@ -53,7 +53,7 @@ export default function CardProfile() {
             </Link>
           </li>
         </ul>
-        <ul className="list-inside flex justify-start mt-3 mx-auto">
+        <ul className="list-inside flex justify-start mt-4 mx-auto space-x-2">
           <li>
             <Link href="https://www.linkedin.com/in/fabrice-sapienza-8934a5129">
               <a aria-label="Page Linkedin Fabrice Sapienza">

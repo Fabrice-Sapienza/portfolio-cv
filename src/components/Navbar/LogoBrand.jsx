@@ -13,7 +13,7 @@ export default function LogoBrand() {
       />
 
       <div className="text-center">
-        <span className="ml-2 text-secondary text-2xl block font-thin">
+        <span className="ml-2 text-2xl block font-thin">
           <span className="font-bold text-primary">F</span>abrice{' '}
           <span className="font-bold text-primary">S</span>apienza
         </span>

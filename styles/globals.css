@@ -15,10 +15,9 @@
         .is-current::after {
             content: '';
             position: absolute;
-            bottom: 3px;
+            bottom: 5px;
             right: 0;
             width: 100%;
-            @apply border-solid;
             @apply border;
             @apply border-primary;
         }

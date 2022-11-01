@@ -9,10 +9,10 @@ export default function MenuItem({ title, anchor, closeMenu }) {
           to={anchor}
           href={`#${anchor}`}
           className="cursor-pointer font-medium text-lg transition-all duration-200 hover:text-primary"
-          // spy={true}
-          // activeClass="is-current"
+          spy={true}
+          activeClass="is-current"
           smooth={true}
-          offset={-150}
+          offset={-550}
           duration={500}
           onClick={closeMenu}
         >
