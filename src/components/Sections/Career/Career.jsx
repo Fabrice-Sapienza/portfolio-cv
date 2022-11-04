@@ -30,25 +30,18 @@ export default function Career({ anchorScrollSpy }) {
             list={['Diplôme RNCP niveau 3', 'JavaScript', 'PHP', 'MySQL', 'HTML / CSS']}
           />
           <CareerItem
-            date="2016 - 2019"
+            date="2016 - 2021"
             title="Manageo"
-            subTitle="Développeur et Intégrateur Web"
-            list={[
-              'Intégration Emailing',
-              'Développement et intégration des Landing Page',
-              'Développement et maintenance d’outils interne en Javascript/PHP/JAVA',
-              'Formation et encadrement de personnel interne et international',
-            ]}
-          />
-          <CareerItem
-            date="2019 - 2021"
-            title="Manageo"
-            subTitle="Développeur React.JS"
+            subTitle="Développeur Front-End React.js"
             list={[
               "Développement d'applications en ReactJS",
-              'Développement et intégration des projets sur NextJs/GatsbyJs',
-              'Déploiement d’applications et function serverless sur Vercel',
+              'Développement et intégration des projets sur NextJs et GatsbyJs',
+              'Déploiement d’applications sur Vercel et Netlify',
+              'Développement et maintenance d’outils interne en Javascript/PHP/JAVA',
+              'Développement et intégration des Landing Page',
               'Participation aux chiffrages, poker planning, rétrospective de sprint',
+              'Intégration Emailing',
+              'Formation et encadrement de personnel interne et international',
             ]}
           />
           <CareerItem
@@ -56,14 +49,12 @@ export default function Career({ anchorScrollSpy }) {
             title="École O'clock"
             subTitle="Formation avancée"
             list={[
-              'ReactJS',
-              'React-Redux / Recoil / Context',
-              'Hooks / Reducer',
+              'ReactJS, Webpack',
+              'React Redux, Redux-Thunk',
+              'Context, Hooks, Reducer, Recoil',
               'React-Router',
-              'Architecture complexe',
+              'Tests unitaire avec Jest, Enzyme',
               'JWT',
-              'Tests, TDD / BDD',
-              'Jest, Enzyme',
             ]}
           />
         </ol>

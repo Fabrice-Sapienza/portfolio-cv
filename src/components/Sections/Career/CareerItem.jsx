@@ -11,7 +11,7 @@ export default function CareerItem({ date, title, subTitle, list }) {
         <div className="mt-0.5 ml-4 pb-5 lg:ml-0">
           <h4 className="font-bold text-xl mb-1.5">{title}</h4>
           <h5 className="text-gray-100 mb-3 font-bold">{subTitle}</h5>
-          <ul className="text-white font-extralight">
+          <ul className="text-gray-300 font-extralight">
             {list.map((item, index) => (
               <li key={index}>{item}</li>
             ))}
