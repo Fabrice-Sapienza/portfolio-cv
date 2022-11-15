@@ -22,4 +22,27 @@
             @apply border-primary;
         }
     }
+        /* ===== Scrollbar CSS ===== */
+        /* Firefox */
+        * {
+            scrollbar-width: auto;
+            scrollbar-color: #00b2df #ffffff;
+        }
+    
+        /* Chrome, Edge, and Safari */
+        *::-webkit-scrollbar {
+            @apply w-3;
+        }
+    
+        *::-webkit-scrollbar-track {
+            @apply bg-white;
+        }
+    
+        *::-webkit-scrollbar-thumb {
+            @apply bg-primary;
+            @apply rounded-xl;
+            @apply border-[2px];
+            @apply border-solid;
+            @apply border-white;
+        }
 }

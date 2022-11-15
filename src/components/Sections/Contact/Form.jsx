@@ -51,7 +51,7 @@ export default function Form() {
         <div className="relative">
           <input
             disabled={loader && true}
-            className="w-full h-10 text-secondary placeholder-transparent border-b border-gray-300 peer focus:outline-none focus:border-b-2 focus:border-primary text-sm"
+            className="w-full h-10 bg-white text-secondary placeholder-transparent border-b border-gray-300 peer focus:outline-none focus:border-b-2 focus:border-primary text-sm"
             placeholder="Nom"
             name="name"
             type="text"
@@ -70,7 +70,7 @@ export default function Form() {
         <div className="relative">
           <input
             disabled={loader && true}
-            className="w-full h-10 text-secondary placeholder-transparent border-b border-gray-300 peer focus:outline-none focus:border-b-2 focus:border-primary text-sm"
+            className="w-full h-10 bg-white text-secondary placeholder-transparent border-b border-gray-300 peer focus:outline-none focus:border-b-2 focus:border-primary text-sm"
             placeholder="Email"
             {...register('email', {
               required: "Afin de pouvoir vous répondre, merci d'indiquer votre adresse email.",
@@ -95,7 +95,7 @@ export default function Form() {
         <div className="relative">
           <textarea
             disabled={loader && true}
-            className="w-full h-48 text-secondary placeholder-transparent border-b border-gray-300 peer pt-2 focus:outline-none focus:border-b-2 focus:border-primary text-sm"
+            className="w-full h-48 bg-white text-secondary placeholder-transparent border-b border-gray-300 peer pt-2 focus:outline-none focus:border-b-2 focus:border-primary text-sm"
             placeholder="Votre message"
             name="message"
             type="text"
