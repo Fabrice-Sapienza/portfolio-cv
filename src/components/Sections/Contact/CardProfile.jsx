@@ -1,18 +1,22 @@
 import { FaLinkedin, FaGithub, FaPhoneAlt, FaRegEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
 import Link from 'next/link';
 import Portrait from '../../../../public/assets/portrait.jpg';
+import Image from 'next/image';
 
 export default function CardProfile() {
   return (
     <div className="bg-white block rounded-lg shadow-lg">
       <div className="relative overflow-hidden bg-no-repeat bg-cover">
-        <img
-          src={Portrait.src}
-          alt="Photo Fabrice Sapienza Développeur Front React JS"
-          width="250"
-          height="250"
-          className="w-full rounded-t-lg"
-        />
+        <div className="w-[250px] h-[250px]">
+          <Image
+            src={Portrait}
+            alt="Photo Fabrice Sapienza Développeur Front React JS"
+            width={250}
+            height={250}
+            layout="fixed"
+            className="rounded-t-lg"
+          />
+        </div>
         <svg
           className="absolute left-0 bottom-0"
           xmlns="http://www.w3.org/2000/svg"
