@@ -1,6 +1,4 @@
 import { Link } from 'react-scroll';
-import humanDev from '../../../../public/assets/humanDev.gif';
-import Image from 'next/image';
 
 export default function About({ anchorScrollSpy }) {
   return (
@@ -47,15 +45,10 @@ export default function About({ anchorScrollSpy }) {
               .
             </p>
           </div>
-          <div className="shadow-2xl border w-full">
-            <Image
-              src={humanDev}
-              alt="Human developer"
-              width={640}
-              height={480}
-              layout="responsive"
-              priority={true}
-            />
+          <div className="shadow-2xl border w-full relative">
+            <video autoPlay muted loop className="object-cover">
+              <source src="/assets/humanDev.mp4" type="video/mp4" />
+            </video>
           </div>
         </div>
       </div>
