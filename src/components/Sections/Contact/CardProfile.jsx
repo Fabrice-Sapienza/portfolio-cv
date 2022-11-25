@@ -59,7 +59,7 @@ export default function CardProfile() {
         </ul>
         <ul className="list-inside flex justify-start mt-4 mx-auto space-x-2">
           <li>
-            <Link href="https://www.linkedin.com/in/fabrice-sapienza-8934a5129">
+            <Link href="https://www.linkedin.com/in/fabrice-sapienza">
               <a aria-label="Page Linkedin Fabrice Sapienza">
                 <FaLinkedin className="cursor-pointer text-2xl text-secondary transition-all duration-200 hover:text-primary mr-2" />
               </a>
