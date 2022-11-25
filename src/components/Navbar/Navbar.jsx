@@ -42,7 +42,7 @@ export default function Navbar() {
             } flex justify-center items-center my-6 lg:my-0 lg:mx-3 lg:flex`}
           >
             <Button onClick={() => setIsOpen(false)}>
-              <Link href="./doc/CV_FabriceSapienza.pdf">
+              <Link href="https://drive.google.com/drive/folders/1fq82SgHGKEsMq3H96T5jIZwI8vg3LC6X?usp=sharing">
                 <a target="_blank" className="flex items-center justify-center">
                   Télécharger CV <MdOutlineFileDownload className="inline text-xl" />
                 </a>
